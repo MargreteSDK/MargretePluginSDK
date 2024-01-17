@@ -1,4 +1,11 @@
-﻿#pragma once
+﻿// MargretePLuginSDK
+// Copyright (c) 2024 inonote
+//
+// This software is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+
+#pragma once
+#include <memory.h>
 #include <stdint.h>
 
 typedef uint32_t MpResult;
