@@ -377,6 +377,16 @@ public:
 		m_ptr = ptr;
 	}
 
+	MargreteComPtr(const MargreteComPtr<T>& x) {
+		m_ptr = x.m_ptr;
+		m_ptr->addRef();
+	}
+
+	MargreteComPtr(MargreteComPtr<T>&& x) noexcept {
+		m_ptr = x.m_ptr;
+		x.m_ptr = nullptr;
+	}
+
 	~MargreteComPtr() {
 		if (m_ptr)
 			m_ptr->release();
