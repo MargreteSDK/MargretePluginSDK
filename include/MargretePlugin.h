@@ -12,7 +12,7 @@ typedef uint32_t MpResult;
 typedef int MpBoolean;
 typedef int MpInteger;
 
-#define MP_SDK_VERSION 1
+#define MP_SDK_VERSION 2
 
 #define MP_TRUE 1
 #define MP_FALSE 0
@@ -120,6 +120,9 @@ public:
 #define MP_NOTEEXATTR_HAS_NOTE 2
 #define MP_NOTEEXATTR_EXJDG 3
 
+#define MP_OPTIONVALUE_AIRCRUSH_TRACELIKE 0
+#define MP_OPTIONVALUE_AIRCRUSH_HEADONLY 2147483647
+
 struct MP_NOTEINFO {
 	MpInteger type; // MP_NOTETYPE_
 	MpInteger longAttr; // MP_NOTELONGATTR_
@@ -131,6 +134,7 @@ struct MP_NOTEINFO {
 	MpInteger height;
 	MpInteger tick;
 	MpInteger timelineId;
+	MpInteger optionValue;
 };
 
 // {7BF6174E-DDF7-498C-AE30-A92DCE2B94D9}
